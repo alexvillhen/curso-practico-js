@@ -8,8 +8,70 @@
     <title>Figuras geométricas</title>
 </head>
 <body>
-    <h1>Figuras geométricas </h1>
+    <header>
+        <h1>Figuras geométricas</h1>
+        <p>Este es el primer taller del curso práctico de JS</p>
+    </header>
 
+    <main>
+        <section class="figura section-cuadro">
+            <h2>Calcula el área y perímetro de un cuadrado</h2>
+
+            <form action="#">
+                <label for="cuadrado">Escribe cuanto mide cada lado de tu cuadrado:</label>
+                <input id="cuadrado" type="number">
+                <button type="button" onclick="calcularPerimetroCuadro()">Calcular perímetro</button>
+                <button type="button" onclick="calcularAreaCuadro()">Calcular área</button>
+            </form>
+        </section>
+
+        <section class="figura section-triangulo">
+            <h2>Calcula el área y perímetro de un Triángulo</h2>
+
+            <form action="#">
+                <label for="lado1">Lado 1</label>
+                <input id="lado1" type="number">
+
+                <label for="lado2">Lado 2</label>
+                <input id="lado2" type="number">
+
+                <label for="base">Base</label>
+                <input id="base" type="number">
+
+                <label for="altura">Altura</label>
+                <input id="altura" type="number">
+
+                <button type="button" onclick="calcularPerimetroTriangulo()">Calcular perímetro</button>
+                <button type="button" onclick="calcularAreaTriangulo()">Calcular área</button>
+            </form>
+        </section>
+
+        <section class="figura section-isoceles">
+            <h2>Calcula la altura de un triangulo isoseles</h2>
+
+            <form action="#">
+                <label for="lados">medida de los lados</label>
+                <input id="lados" type="number">
+
+                <label for="base-isoseles">Base</label>
+                <input id="base-isoseles" type="number">
+
+                <button type="button" onclick="calcularAlturaIsoseles()">Calcular altura</button>
+            </form>
+        </section>
+
+
+        <section class="figura section-circulo">
+            <h2>Calcula el área y perímetro de un círculo</h2>
+
+            <form action="#">
+                <label for="radio">Escribe cuanto mide el radio de tu círculo:</label>
+                <input id="radio" type="number">
+                <button type="button" onclick="calcularPerimetroCirculo()">Calcular perímetro</button>
+                <button type="button" onclick="calcularAreaCirculo()">Calcular área</button>
+            </form>
+        </section>
+    </main>
     <script src="./figuras.js"></script>
 </body>
 </html>

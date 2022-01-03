@@ -1,58 +1,92 @@
 /* CUADRO */
-//declaración de variables y funciones para el cuadro
-console.group("cuadro");
-const ladoCuadrado = 3;
 const perimetroCuadro = lado => lado * 4;
 const areaCuadro = lado => lado**2;
 
-//Ejecución del programa del cuadro
-console.log(`Los lados de tu cuadrado miden: ${ladoCuadrado}cm`);
-console.log(`El perimetro es igual a: ${perimetroCuadro(ladoCuadrado)}cm`);
-console.log(`Y el área es igual a: ${areaCuadro(ladoCuadrado)}cm²`);
-console.groupEnd();
-
 
 /* TRIANGULO */
-//declaración de variables y funciones
-console.group("Triangulo");
-const ladoTriangulo1 = 6;
-const ladoTriangulo2 = 6;
-const baseTriangulo = 4;
-const alturaTriangulo = 5.5;
-
 const perimetroTriangulo = (lado1, lado2, lado3) => {
-    return console.log(`El perimetro es igual a ${lado1 + lado2 + lado3}`);
+    return alert(`El perimetro es igual a ${lado1 + lado2 + lado3}`);
 }
-
 const areaTriangulo = (base, altura) => {
-    console.log(`El área es igual a ${(base * altura)/2}`);
+    alert(`El área es igual a ${(base * altura)/2}`);
 }
 
-//Ejecución el programa Triangulo
-console.log(`Los lados del triangulo son ${ladoTriangulo1}cm, ${ladoTriangulo2}cm y ${baseTriangulo}cm`);
-console.log(`La altura es de ${alturaTriangulo}`);
-
-perimetroTriangulo(ladoTriangulo1, ladoTriangulo2, baseTriangulo);
-areaTriangulo(baseTriangulo, alturaTriangulo);
-
-console.groupEnd();
-
+const alturaIsoseles = (base, lados) =>{
+    const altura = Math.sqrt((lados**2) - ((base/2)**2));
+    alert(`La altura es igual a ${altura}cm`);
+}
 
 /* CIRCULO */
-//declaración de variables y funciones
-console.group("circulo");
-const radio = 3;
-
 const circunferencia = radio => {
-    console.log(`El perimetro es igual a ${Math.PI * radio * 2}`);
+    alert(`El perimetro es igual a ${Math.PI * radio * 2}`);
 }
 
 const areaCirculo = radio => {
-    console.log(`El área es igual a ${radio**2 * Math.PI}`);
+    alert(`El área es igual a ${radio**2 * Math.PI}`);
 }
 
-//ejecución de código
-console.log(`El radio de tu circulo es igual a ${radio}cm`);
-circunferencia(radio);
-areaCirculo(radio);
-console.groupEnd();
+
+//interacción HTML
+const calcularPerimetroCuadro = () => {
+    const input = document.getElementById("cuadrado");
+    const valor = input.value;
+
+    const perimetro = perimetroCuadro(valor);
+
+    return alert(`El perímetro es igual a ${perimetro}`);
+}
+
+
+const calcularAreaCuadro = () => {
+    const input = document.getElementById("cuadrado");
+    const valor = input.value;
+
+    const area = areaCuadro(valor);
+
+    return alert(`El área de tu cuadro el igual a: ${area}`);
+}
+
+const calcularPerimetroTriangulo = () => {
+    const input1 = document.getElementById("lado1");
+    const input2 = document.getElementById("lado2");
+    const input3 = document.getElementById("base");
+    const valorLado1 = parseInt(input1.value);
+    const valorLado2 = parseInt(input2.value);
+    const valorBase = parseInt(input3.value);
+
+    perimetroTriangulo(valorLado1, valorLado2, valorBase);
+}
+
+const calcularAreaTriangulo = () => {
+    const base = document.getElementById("base");
+    const altura = document.getElementById("altura");
+    const valorBase = parseInt(base.value);
+    const valorAltura = parseInt(altura.value);
+
+    areaTriangulo(valorBase, valorAltura);
+}
+
+
+const calcularAlturaIsoseles = () => {
+    const lados = document.getElementById("lados");
+    const base = document.getElementById("base-isoseles");
+    const valorLados = lados.value;
+    const valorBase = base.value;
+
+    alturaIsoseles(valorBase, valorLados);
+}
+
+
+const calcularPerimetroCirculo = () => {
+    const radio = document.getElementById("radio");
+    const valorRadio = radio.value;
+
+    circunferencia(valorRadio);
+}
+
+const calcularAreaCirculo = () => {
+    const radio = document.getElementById("radio");
+    const valorRadio = radio.value;
+
+    areaCirculo(valorRadio);
+}
