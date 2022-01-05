@@ -23,59 +23,52 @@ main{
     flex-direction: column;
 }
 
-.figura{
+.descuento{
     padding:14px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border:transparnt solid 1px;
+    border:transparent solid 1px;
+    background-color: var(--brick);
     margin-bottom:32px;
     border-radius:10px;
+    height: 100%;
 }
 
-.section-cuadro{
-    background-color:var(--brick);
-}
-
-.section-triangulo{
-    background-color:var(--yellow);
-}
-
-.section-isosceles{
-    background-color:var(--purple);
-}
-
-.section-circulo{
-    background-color:var(--mint);
-}
-
-
-.figura h2{
-    margin-bottom:12px;
+.descuento h2{
+    margin-bottom:32px;
     width:70%
 }
 
-.figura form{
-    /* border:1px solid blue; */
+.descuento form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 90%;
 }
 
-.figura label{
-    margin-top:32px;
+.descuento input{
+    margin-bottom: 32px;
 }
 
-.figura form button{
-    width:100%;
+.descuento form button{
+    width:180px;
+    height: 50px;
     cursor:pointer;
-    margin:12px;
+    padding:8px;
 }
 
-.buttons{
-    display: flex;
-    flex-direction: column;
+#result-price{
+    width:50%;
+    text-align: center;
+    font-weight: bold;
+    font-size:2rem;
+    color:var(--white);
+    background-color: var(--purple);
+    border-radius:25px;
+    padding:4px;
+    display: none;
 }
