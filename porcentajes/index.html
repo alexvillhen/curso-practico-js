@@ -12,7 +12,7 @@
         <h1>Porcentajes y descuentos</h1>
     </header>
 
-    <section>
+    <section class="descuento">
         <h2>Calcula el precio a pagar con descuentos</h2>
         <form action="#">
             <label for="input-price">Precio original</label>
@@ -20,6 +20,9 @@
 
             <label for="input-discount">descuento</label>
             <input id="input-discount" type="number" min="0" max="100">
+           
+            <label for="input-cupon">¿Cuentas con algún cupon?</label>
+            <input type="text" name="" id="input-cupon" placeholder="Si no, dejar en blanco">
 
             <button type="button" onclick="onClickButtonPriceDiscount()">Calcular precio con descuento</button>
             <p id="result-price"></p>

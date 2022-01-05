@@ -1,7 +1,9 @@
-const calcularPrecioFinal = (costo, descuento) =>{
+const calcularPrecioFinal = (costo, descuento, cupon) =>{
     const porcentajeConDescuento = 100 - descuento;
-    const precioFinal = (costo * porcentajeConDescuento)/100;
+    const precioSinCupon = (costo * porcentajeConDescuento)/100;
+    const precioFinal = (precioSinCupon * (100 - cupon)/100)
     return("$"+precioFinal);
+    
 }
 
 const onClickButtonPriceDiscount = () => {
@@ -11,7 +13,11 @@ const onClickButtonPriceDiscount = () => {
     const inputDiscount = document.getElementById("input-discount");
     const porcentajeDescuento = inputDiscount.value;
 
-    const resultPrice = document.getElementById("result-price");
+    const inputCupon = document.getElementById("input-cupon");
+    const valorCupon = inputCupon.value;
 
-    resultPrice.innerHTML = `El precio con descuento es igual a ${calcularPrecioFinal(precioOriginal,porcentajeDescuento)}`;
+    const resultPrice = document.getElementById("result-price");
+    
+    resultPrice.style.display = "block";
+    resultPrice.innerHTML = `${calcularPrecioFinal(precioOriginal,porcentajeDescuento, valorCupon)}`;
 }

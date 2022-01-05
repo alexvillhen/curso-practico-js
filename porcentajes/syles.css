@@ -1,7 +1,74 @@
-*{
-    font-family: sans-serif;
+:root{
+    --white: #F4F9F9; 
+    --brick: #DD4A48;
+    --yellow:#FFBD35;
+    --mint:#A4EBF3;
+    --purple:#8267BE;
 }
 
-button{
+*{
+    font-family:sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    padding:0;
+    background-color:var(--white);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.descuento{
+    padding:14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:transparent solid 1px;
+    background-color: var(--brick);
+    margin-bottom:32px;
+    border-radius:10px;
+    height: 100%;
+}
+
+.descuento h2{
+    margin-bottom:32px;
+    width:70%
+}
+
+.descuento form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 90%;
+}
+
+.descuento input{
+    margin-bottom: 32px;
+}
+
+.descuento form button{
+    width:180px;
+    height: 50px;
     cursor:pointer;
+    padding:8px;
+}
+
+#result-price{
+    width:50%;
+    text-align: center;
+    font-weight: bold;
+    font-size:2rem;
+    color:var(--white);
+    background-color: var(--purple);
+    border-radius:25px;
+    padding:4px;
+    display: none;
 }

@@ -1,3 +1,11 @@
+:root{
+    --white: #F4F9F9; 
+    --brick: #DD4A48;
+    --yellow:#FFBD35;
+    --mint:#A4EBF3;
+    --purple:#8267BE;
+}
+
 *{
     font-family:sans-serif;
     box-sizing: border-box;
@@ -7,7 +15,7 @@ body{
     display: grid;
     place-items: center;
     padding:0;
-    background-color:#F4F9F9;
+    background-color:var(--white);
 }
 
 main{
@@ -27,19 +35,19 @@ main{
 }
 
 .section-cuadro{
-    background-color:#DD4A48;
+    background-color:var(--brick);
 }
 
 .section-triangulo{
-    background-color:#FFBD35;
+    background-color:var(--yellow);
 }
 
 .section-isosceles{
-    background-color:#8267BE;
+    background-color:var(--purple);
 }
 
 .section-circulo{
-    background-color:#A4EBF3;
+    background-color:var(--mint);
 }
 
 
