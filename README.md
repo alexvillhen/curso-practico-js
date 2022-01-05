@@ -14,3 +14,10 @@ Repo realizada para el curso práctico de JS por platzi.
 - Segundo paso: implementar formulas en JS
 - Tercer paso: crear funciones
 - Cuarto paso: integrar JS con HTML
+
+## Taller #3: Media, mediana y moda
+
+- Primer paso: definir las formulas
+- Segundo paso: implementar formulas en JS
+- Tercer paso: crear funciones
+- Cuarto paso: integrar JS con HTML
