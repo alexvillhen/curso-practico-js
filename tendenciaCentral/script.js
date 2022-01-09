@@ -1,3 +1,6 @@
+//==========================================
+// MEDIA
+
 function promedio(arr){
     const sumaArr = arr.reduce(
         function (valorAcumulado = 0, nuevoElemento){
@@ -9,13 +12,8 @@ function promedio(arr){
     return promedioArr;
 }
 
-console.log( promedio([1,2,3]) );
-
-
 //==========================================
 // MEDIANA
-
-const lista1 = [300,3,2,200,1000,10,1];
 
 function esPar(num) {
     if(num % 2 == 0){
@@ -24,7 +22,6 @@ function esPar(num) {
         return false;
     }
 }
-
 
 function mediana(arr) {
     const lista = arr.sort((a, b) => a - b);
@@ -43,5 +40,37 @@ function mediana(arr) {
     }
 }
 
-console.log( mediana(lista1) );
 
+//=================================================================
+//MODA
+
+function moda(arr) {
+    const arrCount = {};
+    arr.map(
+        function(elemento) {
+            if (arrCount[elemento]) {
+                arrCount[elemento] += 1;
+            } else{
+                arrCount[elemento] = 1;
+            }
+        }
+    )
+    const listaArr = Object.entries(arrCount);
+    listaArr.sort((a,b) => a[1] - b[1]);
+    const moda = listaArr[listaArr.length - 1];
+    return moda;
+}
+
+
+//FLUJO DE CODIGO
+
+let valoresPromedio = [];
+
+function añadirValores() {
+    const valorInput = document.getElementById("promedio-number");
+    const valor = valorInput.value;
+    valoresPromedio.push(valor);
+}
+
+const buttonPromedio = document.getElementById("calcular-promedio");
+buttonPromedio.addEventListener("click", promedio(valoresPromedio));

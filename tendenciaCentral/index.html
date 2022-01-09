@@ -5,10 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promedio</title>
+    <title>Medidas de tendencia central</title>
 </head>
 <body>
-    <h1>Promedio</h1>
+
+    <header>
+        <h1>Medidas de tendencia central</h1>
+    </header>
+
+    <main>
+        <section class="section-promedio">
+            <h2>Calcula el promedio</h2>
+
+            <form action="#">
+                <label for="promedio-number">Ingresa los valores uno por uno</label>
+                <input type="number" id="promedio-number" placeholder="#####">
+                <button onclick="añadirValores()" type="button" id="promedio-valores">Añadir valor</button>
+                <button id="calcular-promedio">Calcular promedio</button>
+            </form>
+            <div class="valores">
+                <p id="promedio-valores-p"></p>
+            </div>
+        </section>
+    </main>
+
     <script src="./script.js"></script>
 </body>
 </html>
