@@ -21,3 +21,10 @@ Repo realizada para el curso práctico de JS por platzi.
 - Segundo paso: implementar formulas en JS
 - Tercer paso: crear funciones
 - Cuarto paso: integrar JS con HTML
+
+## Taller #4: analisis salarial
+
+- Primer paso: definir las formulas en base a la información requerida
+- Segundo paso: implementar formulas en JS
+- Tercer paso: crear funciones
+- Cuarto paso: integrar JS con HTML
