@@ -21,42 +21,40 @@ body{
 main{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width:100%;
 }
 
-.figura{
+section{
+    width:80%;
     padding:14px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border:transparnt solid 1px;
+    border:transparent solid 1px;
     margin-bottom:32px;
     border-radius:10px;
 }
 
-.section-cuadro{
+.section-promedio{
     background-color:var(--brick);
 }
 
-.section-triangulo{
+.section-mediana{
     background-color:var(--yellow);
 }
 
-.section-isosceles{
+.section-moda{
     background-color:var(--purple);
 }
 
-.section-circulo{
-    background-color:var(--mint);
-}
-
-
-.figura h2{
+section h2{
     margin-bottom:12px;
     width:70%
 }
 
-.figura form{
+section form{
     /* border:1px solid blue; */
     display: flex;
     flex-direction: column;
@@ -65,17 +63,24 @@ main{
     text-align: center;
 }
 
-.figura label{
+section label{
     margin-top:32px;
+    margin-bottom:12px;
+    font-weight: bold;
 }
 
-.figura form button{
-    width:100%;
+section form button{
+    width:70%;
+    padding:4px;
     cursor:pointer;
-    margin:12px;
+    margin:4px;
 }
 
 .buttons{
     display: flex;
     flex-direction: column;
+}
+
+.p-rta{
+    font-weight: bold;
 }

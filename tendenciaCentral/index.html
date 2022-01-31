@@ -14,17 +14,48 @@
     </header>
 
     <main>
+        <!-- ======PROMEDIO======= -->
         <section class="section-promedio">
             <h2>Calcula el promedio</h2>
 
             <form action="#">
                 <label for="promedio-number">Ingresa los valores uno por uno</label>
                 <input type="number" id="promedio-number" placeholder="#####">
-                <button onclick="añadirValores()" type="button" id="promedio-valores">Añadir valor</button>
-                <button id="calcular-promedio">Calcular promedio</button>
+                <button onclick="añadirValoresPromedio()" type="button" id="promedio-valores">Añadir valor</button>
+                <button id="calcular-promedio"  onclick="calcularPromedio()">Calcular promedio</button>
             </form>
             <div class="valores">
-                <p id="promedio-valores-p"></p>
+                <p class="p-rta" id="promedio-valores-p"></p>
+            </div>
+        </section>
+
+        <!-- ======MEDIANA======= -->
+        <section class="section-mediana">
+            <h2>Calcula la mediana</h2>
+
+            <form action="#">
+                <label for="promedio-number">Ingresa los valores uno por uno</label>
+                <input type="number" id="mediana-number" placeholder="#####">
+                <button onclick="añadirValoresMediana()" type="button" id="mediana-valores">Añadir valor</button>
+                <button id="calcular-mediana" onclick="calcularMediana()">Calcular mediana</button>
+            </form>
+            <div class="valores">
+                <p class="p-rta" id="mediana-valores-p"></p>
+            </div>
+        </section>
+
+        <!-- ======MODA======= -->
+        <section class="section-moda">
+            <h2>Calcula la moda</h2>
+
+            <form action="#">
+                <label for="moda-number">Ingresa los valores uno por uno</label>
+                <input type="number" id="moda-number" placeholder="#####">
+                <button onclick="añadirValoresModa()" type="button" id="moda-valores">Añadir valor</button>
+                <button id="calcular-moda" onclick="calcularModa()">Calcular moda</button>
+            </form>
+            <div class="valores">
+                <p class="p-rta" id="moda-valores-p"></p>
             </div>
         </section>
     </main>
