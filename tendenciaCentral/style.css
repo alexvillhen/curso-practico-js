@@ -27,7 +27,8 @@ main{
 
 section{
     width:80%;
-    padding:14px;
+    max-width: 600px;
+    padding:50px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -83,4 +84,34 @@ section form button{
 
 .p-rta{
     font-weight: bold;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:0;
+    /* border: 1px solid red; */
+}
+
+footer li{
+    list-style: none;
+    margin:8px;
+    font-weight: bold;
+}
+
+footer a{
+    color:var(--brick);
+    text-decoration: none;
+}
+
+footer a:hover{
+    color:var(--yellow);
+    text-decoration: underline;
 }

@@ -11,23 +11,32 @@
     <header>
         <h1>Porcentajes y descuentos</h1>
     </header>
+    <main>
+        <section class="descuento">
+            <h2>Calcula el precio a pagar con descuentos</h2>
+            <form action="#">
+                <label for="input-price">Precio original</label>
+                <input id="input-price" type="number" placeholder="$$$">
 
-    <section class="descuento">
-        <h2>Calcula el precio a pagar con descuentos</h2>
-        <form action="#">
-            <label for="input-price">Precio original</label>
-            <input id="input-price" type="number" placeholder="$$$">
+                <label for="input-discount">descuento</label>
+                <input id="input-discount" type="number" min="0" max="100" placeholder="%">
+            
+                <label for="input-cupon">¿Cuentas con algún cupon?</label>
+                <input type="text" name="" id="input-cupon" placeholder="Si no, dejar en blanco">
 
-            <label for="input-discount">descuento</label>
-            <input id="input-discount" type="number" min="0" max="100" placeholder="%">
-           
-            <label for="input-cupon">¿Cuentas con algún cupon?</label>
-            <input type="text" name="" id="input-cupon" placeholder="Si no, dejar en blanco">
-
-            <button type="button" onclick="onClickButtonPriceDiscount()">Calcular precio con descuento</button>
-            <p id="result-price"></p>
-        </form>
-    </section>
+                <button type="button" onclick="onClickButtonPriceDiscount()">Calcular precio con descuento</button>
+                <p id="result-price"></p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h3>Accede a otros Talleres de este curso en los siguientes enlaces</h3>
+        <ul>
+            <li><a href="../index.html">Calculo de figuras</a></li>
+            <li><a href="../tendenciaCentral/index.html">Medidas de tendecia central</a></li>
+            <li><a href="../promedios/index.html">Otros tipos de promedio</a></li>
+        </ul>
+    </footer>
     <script src="porcentajes.js"></script>
 </body>
 </html>
