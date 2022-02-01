@@ -1,6 +1,8 @@
 # Curso-practico-js
 Repo realizada para el curso práctico de JS por platzi.
 
+[URL para acceder al sitio](https://alexvillhen.github.io/curso-practico-js)
+
 ## Taller #1: figuras geométricas
 
 - Primer paso: definir las fórmulas
